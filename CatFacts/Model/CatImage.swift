@@ -10,4 +10,6 @@ import Foundation
 struct CatImage: Decodable, Identifiable {
     let id: String
     let url: String
+    let breeds: [Breed]?
+
 }

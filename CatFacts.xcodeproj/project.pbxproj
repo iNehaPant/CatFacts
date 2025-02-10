@@ -14,7 +14,6 @@
 		BA2355FF2D578CE2002B8759 /* CatFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2355FE2D578CE2002B8759 /* CatFactsUITests.swift */; };
 		BA2356012D578CE3002B8759 /* CatFactsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356002D578CE3002B8759 /* CatFactsUITestsLaunchTests.swift */; };
 		BA2356122D578D9B002B8759 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356112D578D9B002B8759 /* MainView.swift */; };
-		BA2356142D579977002B8759 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356132D579977002B8759 /* ImageView.swift */; };
 		BA2356162D5963AE002B8759 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356152D5963AE002B8759 /* NetworkManager.swift */; };
 		BA2356182D5963CF002B8759 /* ParserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356172D5963CF002B8759 /* ParserHandler.swift */; };
 		BA23561A2D5963E4002B8759 /* CatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356192D5963E4002B8759 /* CatImage.swift */; };
@@ -22,6 +21,9 @@
 		BA2356202D59657D002B8759 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23561F2D59657D002B8759 /* Configuration.swift */; };
 		BA2356222D596659002B8759 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356212D596659002B8759 /* APIHandler.swift */; };
 		BA2356242D59681B002B8759 /* HeaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356232D59681B002B8759 /* HeaderHelper.swift */; };
+		BA2356262D596C55002B8759 /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356252D596C55002B8759 /* BreedDetailView.swift */; };
+		BA2356282D596E01002B8759 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356272D596E01002B8759 /* Breed.swift */; };
+		BA23562D2D5983AC002B8759 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BA23562C2D5983AC002B8759 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,6 @@
 		BA2355FE2D578CE2002B8759 /* CatFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUITests.swift; sourceTree = "<group>"; };
 		BA2356002D578CE3002B8759 /* CatFactsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA2356112D578D9B002B8759 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		BA2356132D579977002B8759 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BA2356152D5963AE002B8759 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BA2356172D5963CF002B8759 /* ParserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserHandler.swift; sourceTree = "<group>"; };
 		BA2356192D5963E4002B8759 /* CatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImage.swift; sourceTree = "<group>"; };
@@ -60,6 +61,8 @@
 		BA23561F2D59657D002B8759 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		BA2356212D596659002B8759 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		BA2356232D59681B002B8759 /* HeaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHelper.swift; sourceTree = "<group>"; };
+		BA2356252D596C55002B8759 /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		BA2356272D596E01002B8759 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA23562D2D5983AC002B8759 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				BA2356192D5963E4002B8759 /* CatImage.swift */,
+				BA2356272D596E01002B8759 /* Breed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				BA2356112D578D9B002B8759 /* MainView.swift */,
-				BA2356132D579977002B8759 /* ImageView.swift */,
+				BA2356252D596C55002B8759 /* BreedDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +204,9 @@
 			dependencies = (
 			);
 			name = CatFacts;
+			packageProductDependencies = (
+				BA23562C2D5983AC002B8759 /* SDWebImageSwiftUI */,
+			);
 			productName = CatFacts;
 			productReference = BA2355E02D578CDF002B8759 /* CatFacts.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +279,9 @@
 				Base,
 			);
 			mainGroup = BA2355D72D578CDE002B8759;
+			packageReferences = (
+				BA23562B2D5983AC002B8759 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = BA2355E12D578CDF002B8759 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,10 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2356282D596E01002B8759 /* Breed.swift in Sources */,
 				BA23561E2D59640E002B8759 /* CatViewModel.swift in Sources */,
 				BA2356162D5963AE002B8759 /* NetworkManager.swift in Sources */,
+				BA2356262D596C55002B8759 /* BreedDetailView.swift in Sources */,
 				BA2356242D59681B002B8759 /* HeaderHelper.swift in Sources */,
-				BA2356142D579977002B8759 /* ImageView.swift in Sources */,
 				BA2356122D578D9B002B8759 /* MainView.swift in Sources */,
 				BA2356182D5963CF002B8759 /* ParserHandler.swift in Sources */,
 				BA23561A2D5963E4002B8759 /* CatImage.swift in Sources */,
@@ -494,6 +506,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,6 +536,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA23562B2D5983AC002B8759 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA23562C2D5983AC002B8759 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA23562B2D5983AC002B8759 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA2355D82D578CDE002B8759 /* Project object */;
 }

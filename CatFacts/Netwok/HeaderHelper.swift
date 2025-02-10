@@ -16,7 +16,7 @@ struct HeadersHelper {
     static func getDefaultHeaders() -> [String: String] {
         var headers = [String: String]()
         headers[HeaderKeys.contentType.rawValue] = "application/json"
-        headers[HeaderKeys.xAppKey.rawValue] = "live_2ijNcZOeZX5rK0o9Hmfq66vVi8LbAIzkFLWEJWQjrcBGckvfOFEuGqPEgJ9rNlNC"
+        headers[HeaderKeys.xAppKey.rawValue] = "live_vMwInkrHfbqzDMZdbcl6xgLejQNQvk6TSqaxvOtqNe9vuPghowCcbiPU4xVp1RWW"
         return headers
     }
 }

@@ -8,7 +8,9 @@
 import Foundation
 
 protocol NetworkService {
-    func fetchCatsData<T: Decodable>(limit: Int?) async throws -> [T]
+    func fetchCatsData<T: Decodable>(limit: Int?,
+                                     hasBreed breed: Bool?,
+                                     breedId: String?) async throws -> [T]
 }
 
 struct NetworkManager: NetworkService {
@@ -27,8 +29,18 @@ struct NetworkManager: NetworkService {
         self.session = session
     }
     
-    func fetchCatsData<T: Decodable>(limit: Int? = nil) async throws -> [T] {
-        let(data, _) = try await apiHandler.getData(from: url, session: session, limit: limit)
+    func fetchCatsData<T: Decodable>(limit: Int? = nil,
+                                     hasBreed breed: Bool? = nil,
+                                     breedId: String? = nil) async throws -> [T] {
+        let(data, _) = try await apiHandler.getData(from: url, session: session, limit: limit, hasBreed: breed, breedId: breedId)
         return try parserHandler.parseData(from: data)
+    }
+}
+
+extension NetworkService {
+    func fetchCatsData<T: Decodable>(limit: Int? = nil,
+                                     hasBreed breed: Bool? = nil,
+                                     breedId: String? = nil) async throws -> [T] {
+        try await fetchCatsData(limit: limit, hasBreed: breed, breedId: breedId)
     }
 }
