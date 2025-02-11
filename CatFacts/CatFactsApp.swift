@@ -11,7 +11,7 @@ import SwiftUI
 struct CatFactsApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView(mainViewModel: CatViewModel(
+            MainView(viewModel: CatViewModel(
                 networkManager: NetworkManager(url: Configuration.baseUrl,
                                                parserHandlder: ParserHandler(),
                                                apiHandler: APIHandler(),

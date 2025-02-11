@@ -33,20 +33,7 @@ struct BreedDetailView: View {
                             ForEach(breedImageData.indices, id:\.self) { index in
                                 let breed = breedImageData[index]
                                 
-                                WebImage(url: URL(string: breed)) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 120)
-                                    
-                                } placeholder: {
-                                    Image(systemName: "photo")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 120)
-                                        .foregroundColor(.gray)
-                                        .opacity(0.5)
-                                }
+                                ImageView(width: 120, height: 120, url: breed, placeholderImage: "photo")
                                
                             }
                         }
@@ -57,7 +44,7 @@ struct BreedDetailView: View {
             .alert(viewModel.errorMessage,
                    isPresented: $viewModel.isError,
                    actions: {
-                Button("Ok", role: .cancel){}
+                Button(viewModel.okTxt, role: .cancel){}
             })
             .onAppear {
                 Task {
@@ -74,5 +61,5 @@ struct BreedDetailView: View {
 }
 
 //#Preview {
-//    BreedDetailView()
+//    BreedDetailView(viewModel: Cat)
 //}

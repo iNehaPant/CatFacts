@@ -11,4 +11,10 @@ struct Breed: Decodable, Equatable {
     let id: String
     let name: String
     let temperament: String
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.name == rhs.name &&
+        lhs.temperament == rhs.temperament
+    }
 }

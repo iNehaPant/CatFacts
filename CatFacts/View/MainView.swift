@@ -9,31 +9,18 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct MainView: View {
-    @StateObject var mainViewModel: CatViewModel
+    @StateObject var viewModel: CatViewModel
     
     var body: some View {
         NavigationView {
             VStack {
-                if let catImageData = mainViewModel.catImage {
-                    NavigationLink(destination: BreedDetailView(viewModel: mainViewModel),
+                if let catImageData = viewModel.catImage {
+                    NavigationLink(destination: BreedDetailView(viewModel: viewModel),
                                    label: {
                         VStack {
-                            WebImage(url: URL(string: catImageData.url)) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: mainViewModel.screenWidth-20, height: 300)
-                                
-                            } placeholder: {
-                                Image(systemName: "photo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: mainViewModel.screenWidth-20, height: 300)
-                                    .foregroundColor(.gray)
-                                    .opacity(0.5)
-                            }
+                            ImageView(width:  viewModel.screenWidth-20, height: viewModel.heightOfCatImage, url: catImageData.url, placeholderImage: "photo")
                             
-                            Text("Tap to see more breed details >>")
+                            Text(viewModel.tapTxt)
                                 .foregroundStyle(.black)
                                 .background(.white)
                         }
@@ -43,24 +30,24 @@ struct MainView: View {
                     
                     Button {
                         Task {
-                            await mainViewModel.fetchCatsData()
+                            await viewModel.fetchCatsData()
                         }
                     } label: {
-                        Text("Random Cat")
+                        Text(viewModel.randomCatTxt)
                             .padding(10)
                             .background(.black)
                             .foregroundColor(.white)
                     }
-                    .disabled(mainViewModel.imageLoading ? true : false)
-                    .opacity(mainViewModel.imageLoading ? 0.5 : 1.0)
+                    .disabled(viewModel.imageLoading ? true : false)
+                    .opacity(viewModel.imageLoading ? 0.5 : 1.0)
                     .padding()
                     
                 }
             }
-            .alert(mainViewModel.errorMessage,
-                   isPresented: $mainViewModel.isError,
+            .alert(viewModel.errorMessage,
+                   isPresented: $viewModel.isError,
                    actions: {
-                Button("Ok", role: .cancel){}
+                Button(viewModel.okTxt, role: .cancel){}
             })
         }
     }

@@ -24,6 +24,10 @@
 		BA2356262D596C55002B8759 /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356252D596C55002B8759 /* BreedDetailView.swift */; };
 		BA2356282D596E01002B8759 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356272D596E01002B8759 /* Breed.swift */; };
 		BA23562D2D5983AC002B8759 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BA23562C2D5983AC002B8759 /* SDWebImageSwiftUI */; };
+		BA2356312D5B8923002B8759 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356302D5B8923002B8759 /* ImageView.swift */; };
+		BA2356342D5B8CA9002B8759 /* CatImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356332D5B8CA9002B8759 /* CatImageTests.swift */; };
+		BA2356362D5B8DD2002B8759 /* BreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356352D5B8DD2002B8759 /* BreedTests.swift */; };
+		BA2356392D5B8F92002B8759 /* CatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356382D5B8F92002B8759 /* CatViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		BA2356232D59681B002B8759 /* HeaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHelper.swift; sourceTree = "<group>"; };
 		BA2356252D596C55002B8759 /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		BA2356272D596E01002B8759 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		BA2356302D5B8923002B8759 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		BA2356332D5B8CA9002B8759 /* CatImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageTests.swift; sourceTree = "<group>"; };
+		BA2356352D5B8DD2002B8759 /* BreedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTests.swift; sourceTree = "<group>"; };
+		BA2356382D5B8F92002B8759 /* CatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,8 @@
 		BA2355F32D578CE2002B8759 /* CatFactsTests */ = {
 			isa = PBXGroup;
 			children = (
+				BA2356372D5B8F82002B8759 /* ViewModel */,
+				BA2356322D5B8C8D002B8759 /* Model */,
 				BA2355F42D578CE2002B8759 /* CatFactsTests.swift */,
 			);
 			path = CatFactsTests;
@@ -184,8 +194,26 @@
 			children = (
 				BA2356112D578D9B002B8759 /* MainView.swift */,
 				BA2356252D596C55002B8759 /* BreedDetailView.swift */,
+				BA2356302D5B8923002B8759 /* ImageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BA2356322D5B8C8D002B8759 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA2356332D5B8CA9002B8759 /* CatImageTests.swift */,
+				BA2356352D5B8DD2002B8759 /* BreedTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA2356372D5B8F82002B8759 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA2356382D5B8F92002B8759 /* CatViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2356312D5B8923002B8759 /* ImageView.swift in Sources */,
 				BA2356282D596E01002B8759 /* Breed.swift in Sources */,
 				BA23561E2D59640E002B8759 /* CatViewModel.swift in Sources */,
 				BA2356162D5963AE002B8759 /* NetworkManager.swift in Sources */,
@@ -342,7 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2356342D5B8CA9002B8759 /* CatImageTests.swift in Sources */,
+				BA2356392D5B8F92002B8759 /* CatViewModelTests.swift in Sources */,
 				BA2355F52D578CE2002B8759 /* CatFactsTests.swift in Sources */,
+				BA2356362D5B8DD2002B8759 /* BreedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

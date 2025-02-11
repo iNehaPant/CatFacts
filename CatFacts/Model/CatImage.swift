@@ -7,9 +7,14 @@
 
 import Foundation
 
-struct CatImage: Decodable, Identifiable {
+struct CatImage: Decodable, Identifiable, Equatable {
     let id: String
     let url: String
     let breeds: [Breed]?
 
+    static func == (lhs: Self, rhs: Self) -> Bool {
+       return lhs.id == rhs.id &&
+        lhs.url == rhs.url &&
+        lhs.breeds == rhs.breeds
+    }
 }
