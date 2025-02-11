@@ -26,7 +26,7 @@ struct ImageView: View {
     }
     
     var body: some View {
-        WebImage(url: URL(string: url)) { image in
+        WebImage(url: URL(string: url), options: [.scaleDownLargeImages]) { image in
             image
                 .resizable()
                 .scaledToFill()

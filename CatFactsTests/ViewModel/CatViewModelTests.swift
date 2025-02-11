@@ -8,37 +8,6 @@
 import XCTest
 @testable import CatFacts
 
-struct MockCatImage {
-    static func getCatData() -> [CatImage] {
-        let cat =  CatImage(
-            id: "MTYzNTk2Mw",
-            url: "https://cdn2.thecatapi.com/images/MTYzNTk2Mw.gif",
-            breeds: [Breed(id: "tvan", name: "Turkish Van", temperament: "Agile, Intelligent, Loyal, Playful, Energetic")]
-        )
-        return [cat]
-    }
-}
-
-class MockNetworkManager: NetworkService {
-    var mockCatImage: [CatImage]
-    
-    init(mockCatImage: [CatImage] =  [CatImage(
-        id: "MTYzNTk2Mw",
-        url: "https://cdn2.thecatapi.com/images/MTYzNTk2Mw.gif",
-        breeds: [Breed(
-            id: "tvan",
-            name: "Turkish Van",
-            temperament: "Agile, Intelligent, Loyal, Playful, Energetic"
-        )]
-    )])  {
-        self.mockCatImage = mockCatImage
-    }
-    
-    func fetchCatsData<T>(limit: Int?, hasBreed breed: Bool?, breedId: String?) async throws -> [T] where T : Decodable {
-        return self.mockCatImage as! [T]
-    }
-}
-
 
 final class CatViewModelTests: XCTestCase {
     var sut: CatViewModel!
@@ -58,7 +27,7 @@ final class CatViewModelTests: XCTestCase {
         await sut.fetchCatsData()
         
         //then
-        XCTAssertEqual(catImageData.first, sut.catsData.first)
+        XCTAssertEqual(catImageData.first, sut.catImage)
     }
     
     override func tearDown() {

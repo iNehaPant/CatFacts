@@ -19,10 +19,16 @@ struct MainView: View {
                                    label: {
                         VStack {
                             ImageView(width:  viewModel.screenWidth-20, height: viewModel.heightOfCatImage, url: catImageData.url, placeholderImage: "photo")
+                                .cornerRadius(12)
+                                .shadow(radius: 5)
+                                .padding(.horizontal, 5)
                             
                             Text(viewModel.tapTxt)
-                                .foregroundStyle(.black)
-                                .background(.white)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding(8)
+                                .background(Color.black.opacity(0.7))
+                                .cornerRadius(8)
                         }
                     })
                     Spacer()
@@ -34,9 +40,14 @@ struct MainView: View {
                         }
                     } label: {
                         Text(viewModel.randomCatTxt)
-                            .padding(10)
-                            .background(.black)
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.black)
                             .foregroundColor(.white)
+                            .cornerRadius(12)
+                            .shadow(radius: 5)
+                            .padding(.horizontal, 40)
                     }
                     .disabled(viewModel.imageLoading ? true : false)
                     .opacity(viewModel.imageLoading ? 0.5 : 1.0)
@@ -53,6 +64,6 @@ struct MainView: View {
     }
 }
 
-//#Preview {
-//MainView(mainViewModel: MainViewModel(networkManager: Netw))
-//}
+#Preview {
+    MainView(viewModel: CatViewModel(networkManager: MockNetworkManager()))
+}

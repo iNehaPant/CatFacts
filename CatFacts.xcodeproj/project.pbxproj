@@ -28,6 +28,8 @@
 		BA2356342D5B8CA9002B8759 /* CatImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356332D5B8CA9002B8759 /* CatImageTests.swift */; };
 		BA2356362D5B8DD2002B8759 /* BreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356352D5B8DD2002B8759 /* BreedTests.swift */; };
 		BA2356392D5B8F92002B8759 /* CatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2356382D5B8F92002B8759 /* CatViewModelTests.swift */; };
+		BA23563D2D5B9609002B8759 /* MockCatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23563C2D5B9609002B8759 /* MockCatImage.swift */; };
+		BA23563F2D5B961F002B8759 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23563E2D5B961F002B8759 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		BA2356332D5B8CA9002B8759 /* CatImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageTests.swift; sourceTree = "<group>"; };
 		BA2356352D5B8DD2002B8759 /* BreedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTests.swift; sourceTree = "<group>"; };
 		BA2356382D5B8F92002B8759 /* CatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModelTests.swift; sourceTree = "<group>"; };
+		BA23563C2D5B9609002B8759 /* MockCatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatImage.swift; sourceTree = "<group>"; };
+		BA23563E2D5B961F002B8759 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 				BA2356212D596659002B8759 /* APIHandler.swift */,
 				BA23561F2D59657D002B8759 /* Configuration.swift */,
 				BA2356232D59681B002B8759 /* HeaderHelper.swift */,
+				BA23563B2D5B95F2002B8759 /* Mock */,
 			);
 			path = Netwok;
 			sourceTree = "<group>";
@@ -214,6 +219,15 @@
 				BA2356382D5B8F92002B8759 /* CatViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA23563B2D5B95F2002B8759 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				BA23563C2D5B9609002B8759 /* MockCatImage.swift */,
+				BA23563E2D5B961F002B8759 /* MockNetworkManager.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +369,8 @@
 				BA2356312D5B8923002B8759 /* ImageView.swift in Sources */,
 				BA2356282D596E01002B8759 /* Breed.swift in Sources */,
 				BA23561E2D59640E002B8759 /* CatViewModel.swift in Sources */,
+				BA23563D2D5B9609002B8759 /* MockCatImage.swift in Sources */,
+				BA23563F2D5B961F002B8759 /* MockNetworkManager.swift in Sources */,
 				BA2356162D5963AE002B8759 /* NetworkManager.swift in Sources */,
 				BA2356262D596C55002B8759 /* BreedDetailView.swift in Sources */,
 				BA2356242D59681B002B8759 /* HeaderHelper.swift in Sources */,

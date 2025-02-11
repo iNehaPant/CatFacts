@@ -22,9 +22,10 @@ class CatViewModel: ObservableObject {
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
     let heightOfCatImage: CGFloat = 300.0
-    let randomCatTxt = "Random Cat"
+    let randomCatTxt = "Search random Cat"
     let tapTxt = "Tap to see more breed details >>"
     let okTxt = "Ok"
+    var limit = 0
     
     init(networkManager: NetworkService) {
         self.networkManager = networkManager
@@ -58,6 +59,7 @@ class CatViewModel: ObservableObject {
     
     //Fetch Cat Breeds from breed Id
     func fetchBreedsById(from breedId: String, limit: Int) async {
+        print(limit)
         do  {
             imageLoading = true
             let catData: [CatImage] =  try await networkManager.fetchCatsData(limit: limit, breedId: breedId)
@@ -70,6 +72,7 @@ class CatViewModel: ObservableObject {
                 }
             }
             imageLoading = false
+            self.limit += limit
         } catch {
             self.isError = true
             self.errorMessage = error.localizedDescription
